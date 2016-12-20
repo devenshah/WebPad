@@ -1,23 +1,26 @@
 {
-  "name": "RecurrencePattern",
+  "name": "recurrence-pattern",
   "homepage": "https://github.com/indiwiz/WebPad",
   "authors": [
-    "Deven Shah <deven.shah@capita.co.uk>"
+    "Deven Shah <devenshah1974@yahoo.com>"
   ],
   "description": "Angual App Example",
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap":"3.3.0",
+    "moment":"2.9.0"
+  },
   "moduleType": [
-                  "node"
-                ],
+    "node"
+  ],
   "keywords": [
-                "Bower"
-              ],
+    "Bower"
+  ],
   "license": "MIT",
   "ignore": [
-              "**/.*",
-              "node_modules",
-              "bower_components",
-              "test",
-              "tests"
-            ]
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
