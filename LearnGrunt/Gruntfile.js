@@ -4,7 +4,12 @@ module.exports = function(grunt){
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     clean: {
-      output: ['ToBeCleaned/*']
+      //output: ['app/scripts/_output/*']
+      options: {
+
+      },
+      files:['app/scripts/_output/*.js'],
+      folders:['app/scripts/_output']
     },
     jshint:{
       options:{
@@ -20,7 +25,7 @@ module.exports = function(grunt){
         files: [{
           expand: true,
           src: 'app/scripts/domain/*.js',
-          dest: 'app/scripts/_output'
+          dest: 'app/scripts/_output/domain.js'
         }]
       },
       options: {

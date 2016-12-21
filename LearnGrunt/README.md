@@ -15,5 +15,8 @@ Create Gruntfile.js
 Apply uglify plugin
 npm install grunt-contrib-uglify --save-dev
 
-
-
+Can run  any task by passing the task name as CLI argument 
+-- grunt clean ///only clean command will be executed
+-- in options you can specify files or folders list. 
+-- folders list will delete the folder.
+-- grunt clean:folders ///only folders part of clean command will be executed
