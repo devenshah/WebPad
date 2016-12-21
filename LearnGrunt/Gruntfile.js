@@ -14,10 +14,27 @@ module.exports = function(grunt){
         reporterOutput: 'jshint.log'
       },
       files:['app/scripts/*/*.js']
+    },
+    uglify:{
+      development: {
+        files: [{
+          expand: true,
+          src: 'app/scripts/domain/*.js',
+          dest: 'app/scripts/_output'
+        }]
+      },
+      options: {
+        mangle: false, //stops renaming functions and variable
+        compress: {
+          drop_console: true //drops console statements
+        },
+        beautify: true
+      }
     }
   });
 
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-jshint");
-  grunt.registerTask("default", ["clean","jshint"]);
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.registerTask("default", ["clean","jshint","uglify"]);
 }
