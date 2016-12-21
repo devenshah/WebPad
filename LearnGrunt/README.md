@@ -20,3 +20,8 @@ Can run  any task by passing the task name as CLI argument
 -- in options you can specify files or folders list. 
 -- folders list will delete the folder.
 -- grunt clean:folders ///only folders part of clean command will be executed
+
+
+Apply html hint plugin to validate html
+npm install grunt-htmlhint --save-dev
+
