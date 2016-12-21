@@ -51,6 +51,20 @@ module.exports = function(grunt) {
                 },
                 src: ['app/views/**/*.html']
             }
+        },
+        less: {
+            development: {
+                options: {
+
+                },
+                files: [{
+                    expand: true,
+                    src: ["app/styles/*.less"],
+                    dest: "app/styles/_output",
+                    ext: ".css",
+                    extDot: "last"
+                }]
+            }
         }
     });
 
@@ -58,5 +72,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-htmlhint");
-    grunt.registerTask("default", ["clean", "jshint", "uglify", "htmlhint"]);
+    grunt.loadNpmTasks("grunt-contrib-less");
+    grunt.registerTask("default", ["clean", "jshint", "uglify", "htmlhint", "less"]);
 }

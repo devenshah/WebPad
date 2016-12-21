@@ -25,3 +25,5 @@ Can run  any task by passing the task name as CLI argument
 Apply html hint plugin to validate html
 npm install grunt-htmlhint --save-dev
 
+Convert less to css
+npm install grunt-contrib-less --save-dev
